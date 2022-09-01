@@ -1,0 +1,218 @@
+:root{
+    --navy1:#082949;
+    --red: #ab304c;
+    --gray:#9d9d9c;
+    --white:#ffffff;
+    --navy2:#082949;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+*, *::before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    font-family: poppins;
+    font-weight: 200;
+}
+
+h1{
+    font-size: 3.8rem;
+    color: var(--navy1);
+}
+
+h2{
+    font-size: 2.8rem;
+    font-family: poppins;
+    font-weight: 400;
+}
+
+h3{
+    font-size: 1.8rem;
+    font-family: poppins;
+    font-weight: 300;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+.Titulo span {
+    font-size: 2.5rem;
+    color: var(--red);
+    
+}
+
+.navegacion-principal{
+    background-color:var(--navy2);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+}
+
+.navegacion-principal a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1.5rem;
+    
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--red);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+@media (min-width: ) {
+    
+}
+
+.hero{
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='69.283' height='40' patternTransform='scale(5) rotate(75)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 1)'/><path d='M46.189-20L57.736 0M46.189 20l11.547 20m-46.189 0l11.547 20M11.547 0l11.547 20m40.415 30H40.415M28.868 30H5.774m23.094-40H5.774m57.735 20H40.415m0 20L28.868 50m11.547-60L28.868 10m46.188 0L63.509 30M5.774 10L-5.773 30m75.056 10H46.189L34.64 20 46.19 0h23.094C73.13 6.667 76.98 13.333 80.83 20zM57.736 60H34.64L23.094 40l11.547-20h23.095c3.848 6.667 7.698 13.333 11.547 20L57.736 60zm0-40H34.64L23.094 0l11.547-20h23.095L69.283 0c-3.87 6.7-8.118 14.06-11.547 20zM34.64 60H11.547L0 40l11.547-20h23.094L46.19 40 34.64 60zm0-40H11.547L0 0l11.547-20h23.094L46.19 0 34.64 20zM23.094 40H0l-5.773-10-5.774-10L0 0h23.094l11.547 20-11.547 20z'  stroke-width='1' stroke='hsla(210, 80%, 16%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,-35)' fill='url(%23a)'/></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;  
+    position: relative;
+    margin-bottom: 2rem;
+
+}
+
+.Contenido-hero{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.Contenido-hero h2, .Contenido-hero p, .boton{
+    background-color: var(--white);
+    padding: 1rem;
+    color: var(--navy1);
+    border-radius: 1rem;
+    border-color: var(--navy1);
+    border-style: solid;
+    border-width: .3rem;
+    text-decoration: none;
+    
+}
+.Contenido-hero p, .boton{
+    font-weight: 400;
+}
+
+.boton{
+    background-color: var(--red);
+    color: var(--white);
+    
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.contenedor{
+    text-align: center;
+    max-width: 120rem;
+    margin: 0 auto;
+
+}
+
+.sombra{
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px 
+    inset, var(--navy1) 0px 0px 0px 3px;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+@media (min-width: 768px ) {
+  .servicios{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    column-gap: 2rem;
+}  
+}
+
+/**Scroll snap**/
+.servicios,
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio .iconos{
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.formulario{
+    background-color: var(--navy1);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: var(--white);
+    
+}
+
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.input{
+    width: 100%;
+    border: none;
+    border-radius: .5rem;
+}
+
+.Enviar .boton{
+    width: 100%;
+}
+
+footer{
+    text-align: center;
+}
+
